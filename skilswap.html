@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Exchange Skills, Share Knowledge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Elements -->
+    <div class="loading-cursor"></div>
+    <div class="loading-overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading<span>.</span><span>.</span><span>.</span></div>
+    </div>
+    <div class="loading-progress"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>SkillSwap</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#matches">Matches</a>
+            <a href="#messages">Messages</a>
+            <a href="#profile">Profile</a>
+        </div>
+        <div class="auth-buttons">
+            <button id="loginBtn" class="btn">Login</button>
+            <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Exchange Skills, Share Knowledge</h1>
+            <p>Connect with others to learn new skills and share your expertise</p>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Available Skills</h2>
+        <div class="skills-grid">
+            <!-- Skills will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Matches Section -->
+    <section id="matches" class="matches-section">
+        <h2>Your Matches</h2>
+        <div class="matches-filter">
+            <button class="filter-btn active" data-filter="all">All Matches</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="accepted">Accepted</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="matches-container">
+            <div class="match-card">
+                <div class="match-header">
+                    <img src="profileimageskillswap.avif" alt="User Avatar" class="user-avatar">
+                    <div class="match-info">
+                        <h3>ADITYA PANDHARE</h3>
+                        <p class="match-status pending">Pending</p>
+                    </div>
+                </div>
+                <div class="match-details">
+                    <div class="skill-exchange">
+                        <div class="skill-offer">
+                            <h4>You Offer</h4>
+                            <span class="skill-tag">Web Development</span>
+                        </div>
+                        <div class="skill-receive">
+                            <h4>You Receive</h4>
+                            <span class="skill-tag">Graphic Design</span>
+                        </div>
+                    </div>
+                    <div class="match-actions">
+                        <button class="btn btn-primary">Accept</button>
+                        <button class="btn btn-secondary">Decline</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="match-header">
+                    <img src="VAIBHAVGAIKWAD.jpg" alt="User Avatar" class="user-avatar">
+                    <div class="match-info">
+                        <h3>VAIBHAV GAIKWAD</h3>
+                        <p class="match-status accepted">Accepted</p>
+                    </div>
+                </div>
+                <div class="match-details">
+                    <div class="skill-exchange">
+                        <div class="skill-offer">
+                            <h4>You Offer</h4>
+                            <span class="skill-tag">Spanish Language</span>
+                        </div>
+                        <div class="skill-receive">
+                            <h4>You Receive</h4>
+                            <span class="skill-tag">Digital Marketing</span>
+                        </div>
+                    </div>
+                    <div class="match-actions">
+                        <button class="btn btn-primary">Schedule Session</button>
+                        <button class="btn btn-secondary">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="match-header">
+                    <img src="satyaskillswap.jpg" alt="User Avatar" class="user-avatar">
+                    <div class="match-info">
+                        <h3>SATYA SHEDGE</h3>
+                        <p class="match-status completed">Completed</p>
+                    </div>
+                </div>
+                <div class="match-details">
+                    <div class="skill-exchange">
+                        <div class="skill-offer">
+                            <h4>You Offered</h4>
+                            <span class="skill-tag">Photography</span>
+                        </div>
+                        <div class="skill-receive">
+                            <h4>You Received</h4>
+                            <span class="skill-tag">Cooking</span>
+                        </div>
+                    </div>
+                    <div class="match-actions">
+                        <button class="btn btn-primary">Leave Review</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="messages" class="messages-section">
+        <h2>Messages</h2>
+        <div class="messages-container">
+            <div class="chat-list">
+                <div class="chat-search">
+                    <input type="text" placeholder="Search conversations...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="chat-items">
+                    <div class="chat-item active">
+                        <img src="profileimageskillswap.avif" alt="User Avatar">
+                        <div class="chat-info">
+                            <h4>ADITYA PANDHARE</h4>
+                            <p class="last-message">Let's schedule our next session!</p>
+                            <span class="time">2m ago</span>
+                        </div>
+                        <span class="unread">2</span>
+                    </div>
+                    <div class="chat-item">
+                        <img src="VAIBHAVGAIKWAD.jpg" alt="User Avatar">
+                        <div class="chat-info">
+                            <h4>VAIBHAV GAIKWAD</h4>
+                            <p class="last-message">Thanks for the great session!</p>
+                            <span class="time">1h ago</span>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <img src="satyaskillswap.jpg" alt="User Avatar">
+                        <div class="chat-info">
+                            <h4>SATYA SHEDGE</h4>
+                            <p class="last-message">Can we meet tomorrow?</p>
+                            <span class="time">3h ago</span>
+                        </div>
+                        <span class="unread">1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chat-header">
+                    <img src="profileimageskillswap.avif" alt="User Avatar">
+                    <div class="chat-header-info">
+                        <h3>ADITYA PANDHARE</h3>
+                        <p class="status">Online</p>
+                    </div>
+                </div>
+                <div class="chat-messages">
+                    <div class="message received">
+                        <p>Hi! I'm interested in learning web development from you.</p>
+                        <span class="time">10:30 AM</span>
+                    </div>
+                    <div class="message sent">
+                        <p>Hello! I'd be happy to help you learn web development.</p>
+                        <span class="time">10:32 AM</span>
+                    </div>
+                    <div class="message received">
+                        <p>Great! When can we schedule our first session?</p>
+                        <span class="time">10:33 AM</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile-section">
+        <h2>Your Profile</h2>
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-cover"></div>
+                <div class="profile-info">
+                    <img src="profileimageskillswap.avif" alt="Profile Picture" class="profile-picture">
+                    <h3>ADITYA PANDHARE</h3>
+                    <p class="profile-bio">Web Developer & Language Enthusiast</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="number">12</span>
+                            <span class="label">Skills Offered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">8</span>
+                            <span class="label">Skills Learned</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">24</span>
+                            <span class="label">Sessions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-content">
+                <div class="profile-section">
+                    <h4>Skills Offered</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <h4>Skills to Learn</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Graphic Design</span>
+                        <span class="skill-tag">Spanish</span>
+                        <span class="skill-tag">Photography</span>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <h4>Recent Activity</h4>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div class="activity-info">
+                                <p>Completed session with Sarah Johnson</p>
+                                <span class="time">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-star"></i>
+                            <div class="activity-info">
+                                <p>Received 5-star rating for Web Development</p>
+                                <span class="time">1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Location</h4>
+                    <p>pune india </p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>surajshedge874@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Phone</h4>
+                    <p>+91 8766910522</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" required>
+                    <label>your name</label>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="email" required>
+                    <label>Your Email</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" required>
+                    <label>Subject</label>
+                    <i class="fas fa-tag"></i>
+                </div>
+                <div class="form-group">
+                    <textarea required></textarea>
+                    <label>Your Message</label>
+                    <i class="fas fa-comment"></i>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Authentication Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm" method="post" action="registration.php">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Exchange Skills, Share Knowledge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Simple dropdown style for profile */
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            min-width: 220px;
+            z-index: 1000;
+            padding: 16px;
+        }
+        .profile-dropdown.active {
+            display: block;
+        }
+        .profile-dropdown h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .profile-dropdown .profile-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+        .profile-dropdown .profile-info {
+            text-align: center;
+        }
+        .profile-dropdown .profile-actions {
+            margin-top: 12px;
+            text-align: center;
+        }
+        .profile-dropdown .btn {
+            margin: 4px 0;
+            width: 100%;
+        }
+        .profile-icon {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Elements -->
+    <div class="loading-cursor"></div>
+    <div class="loading-overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading<span>.</span><span>.</span><span>.</span></div>
+    </div>
+    <div class="loading-progress"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>SkillSwap</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#matches">Matches</a>
+            <a href="#messages">Messages</a>
+        </div>
+        <div class="profile-icon" id="profileIconContainer">
+            <img src="profileimageskillswap.avif" alt="Profile" class="user-avatar" id="profileIcon" style="width:40px;height:40px;border-radius:50%;cursor:pointer;">
+            <div class="profile-dropdown" id="profileDropdown">
+                <div class="profile-info">
+                    <img src="profileimageskillswap.avif" alt="Profile" class="profile-avatar">
+                    <h3>John Doe</h3>
+                    <p>Email: johndoe@email.com</p>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn btn-primary">Edit Profile</button>
+                    <button class="btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Exchange Skills, Share Knowledge</h1>
+            <p>Connect with others to learn new skills and share your expertise</p>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Available Skills</h2>
+        <div class="skills-grid">
+            <!-- Skills will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Matches Section -->
+    <section id="matches" class="matches-section">
+        <h2>Your Matches</h2>
+        <div class="matches-filter">
+            <button class="filter-btn active" data-filter="all">All Matches</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="accepted">Accepted</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="matches-container">
+            <div class="match-card">
+                <div class="match-header">
+                    <img src="profileimageskillswap.avif" alt="User Avatar" class="user-avatar">
+                    <div class="match-info">
+                        <!-- Match info here -->
+                    </div>
+                </div>
+                <!-- More match details here -->
+            </div>
+            <!-- More match cards can be added here -->
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="messages" class="messages-section">
+        <h2>Messages</h2>
+        <div class="messages-container">
+            <!-- Messages will be dynamically added here -->
+        </div>
+    </section>
+
+    <script>
+        // Profile dropdown toggle
+        const profileIcon = document.getElementById('profileIcon');
+        const profileDropdown = document.getElementById('profileDropdown');
+        document.addEventListener('click', function(e) {
+            if (profileIcon.contains(e.target)) {
+                profileDropdown.classList.toggle('active');
+            } else if (!profileDropdown.contains(e.target)) {
+                profileDropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

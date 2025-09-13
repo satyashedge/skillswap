@@ -1,0 +1,23 @@
+{
+  "name": "skillswap",
+  "version": "1.0.0",
+  "description": "A peer-to-peer skill exchange platform",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "npm run dev:client & npm run dev:server",
+    "dev:client": "cd client && npm start",
+    "dev:server": "cd server && nodemon index.js"
+  },
+  "keywords": [
+    "skillswap",
+    "education",
+    "learning",
+    "peer-to-peer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
